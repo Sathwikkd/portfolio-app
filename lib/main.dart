@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:widgets/pages/drawer-menu.dart';
+import 'package:widgets/pages/login.dart';
 
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: MyLogin(),
     );
       
   }
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         appBar:  CupertinoNavigationBar(
 
-          middle: Text("SATHWIK'S PORTFOLIO",style: TextStyle(fontSize: 22),),
+          middle: Text("SATHWIK'S PORTFOLIO",style: TextStyle(color: Colors.black,fontSize: 22),),
           backgroundColor: Colors.green,
 
           leading: GestureDetector(onTap: () {
@@ -50,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
        body: Center(
         child:SingleChildScrollView(
           scrollDirection: Axis.horizontal,
+          //scrollDirection:Axis.vertical,
         
          
            child: Row(
@@ -67,18 +69,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget> [
-                      const Text("WELCOME TO MY PORTFOLIO!",
+                      const Text("WELCOME TO MY PORTFOLIO..!",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Roboto',
-                        letterSpacing: 1.5,           
+                       // letterSpacing: 1.5,           
                       ),
                       ),
                     IconButton(onPressed: (){
                       
-                    }, icon:const Icon(Icons.apple , size: 35)
+                    }, icon:const Icon(Icons.handshake , size: 35)
                     ),
                   
                    const  SizedBox(height: 15,),
